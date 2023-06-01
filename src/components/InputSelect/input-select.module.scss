@@ -1,0 +1,24 @@
+@import '../styles/variables.scss';
+
+.input {
+  all: unset;
+  width: 418px;
+  height: 56px;
+  padding-left: 1rem;
+  border-style: solid;
+  border-width: $borderWidth;
+  border-color: $borderColor;
+  border-radius: $borderRadius 0px 0px $borderRadius;
+}
+
+.select {
+  height: 57.4px;
+  width: 71px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-style: solid;
+  border-width: $borderWidth;
+  border-color: $borderColor;
+  border-radius: 0 $borderRadius $borderRadius 0;
+}

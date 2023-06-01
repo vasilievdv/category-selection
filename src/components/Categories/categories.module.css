@@ -1,0 +1,16 @@
+.category {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-right: 0.7rem;
+}
+
+.choosenCategory {
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  background: rgb(236, 117, 118);
+  color: white;
+}/*# sourceMappingURL=categories.module.css.map */

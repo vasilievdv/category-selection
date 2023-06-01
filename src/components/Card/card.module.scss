@@ -1,0 +1,16 @@
+@import '../styles/variables.scss';
+
+.card {
+  width: 524px;
+  height: 313px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  border-color: $borderColor;
+  border-radius: $borderRadius;
+  border-width: $borderWidth;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
