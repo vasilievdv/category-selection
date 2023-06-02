@@ -3,15 +3,17 @@ import { useAppDispatch } from '../../hooks';
 import { Direction } from '../App';
 import { filterData } from './filterData';
 import { FilterData } from './types';
-import { setDirections } from './actions';
+import { setDirectionsFrom, setSelectedDirectionsTo } from './actions';
+// import { setDirectionsTo } from '../InputSelect';
 import styles from './categories.module.scss';
 
 type Props = {
   directions: Direction[];
+  directionPrefix: string;
 };
 
 function Categories(props: Props) {
-  const { directions } = props;
+  const { directions, directionPrefix } = props;
 
   const [filter, setFilter] = useState<FilterData[]>([]);
 
@@ -22,7 +24,12 @@ function Categories(props: Props) {
   }, []);
 
   useEffect(() => {
-    dispatch(setDirections(directions));
+    if (directionPrefix == 'from') {
+      dispatch(setDirectionsFrom(directions));
+    } else if (directionPrefix == 'to') {
+      setFilter(filterData);
+      dispatch(setSelectedDirectionsTo(directions));
+    }
   }, [directions]);
 
   function onClickFiltrer(code: string[], name: string) {
@@ -33,7 +40,11 @@ function Categories(props: Props) {
       f.name === name ? { ...f, isActive: true } : { ...f, isActive: false }
     );
     setFilter(resetChoosenCategory);
-    dispatch(setDirections(currentOptions));
+    if (directionPrefix == 'from') {
+      dispatch(setDirectionsFrom(currentOptions));
+    } else if (directionPrefix == 'to') {
+      dispatch(setSelectedDirectionsTo(currentOptions));
+    }
   }
 
   return (

@@ -1,15 +1,13 @@
 import { Direction } from '../../App';
-import { SelectState } from '../types';
+import { SelectState } from '../../Categories';
 
-export const setDirectionsReducer = (
+export const setDirectionsToReducer = (
   state: SelectState,
   action: BaseAction<Direction[]>
 ): SelectState => {  
-  console.log(action.payload!);
-  
   return {
     ...state,
-    fromSelect: 
+    toSelect: 
       action.payload!,
   };
 };

@@ -1,7 +1,9 @@
 import { Direction } from '../App';
 
 export const types = {
-  SET_DIRECTIONS: 'SET_DIRECTIONS',
+  SET_DIRECTIONS_FROM: 'SET_DIRECTIONS_FROM',
+  SET_DIRECTIONS_TO: 'SET_DIRECTIONS_TO',
+  SET_SELECTED_DIRECTIONS_TO: 'SET_SELECTED_DIRECTIONS_TO',
 };
 
 export interface FilterData {
@@ -13,4 +15,5 @@ export interface FilterData {
 export interface SelectState {
   fromSelect: Direction[];
   toSelect: Direction[];
+  selectedDirectionsTo: Direction[];
 }

@@ -1,1 +1,2 @@
-export * from './set-directions-action';
+export * from './set-directions-from-action';
+export * from './set-selected-directions-to-action';

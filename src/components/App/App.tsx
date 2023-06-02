@@ -8,7 +8,10 @@ import InputSelect from '../InputSelect';
 
 function App() {
   const { data } = useAppSelector((state) => state.mainPage.directions);
-  const { fromSelect } = useAppSelector((state) => state.select);
+  const { data: filter } = useAppSelector((state) => state.mainPage.filter);
+  const { fromSelect, toSelect, selectedDirectionsTo } = useAppSelector(
+    (state) => state.select
+  );
 
   const dispatch = useAppDispatch();
 
@@ -19,8 +22,10 @@ function App() {
 
   return (
     <Card>
-      <Categories directions={data} />
-      <InputSelect directions={fromSelect} />
+      <Categories directions={data} directionPrefix={'from'} />
+      <InputSelect directions={fromSelect} filter={filter} />
+      <Categories directions={toSelect} directionPrefix={'to'} />
+      <InputSelect directions={selectedDirectionsTo} />
     </Card>
   );
 }
