@@ -1,6 +1,6 @@
 .input {
   all: unset;
-  width: 418px;
+  width: 369px;
   height: 56px;
   padding-left: 1rem;
   border-style: solid;
@@ -11,7 +11,7 @@
 
 .select {
   height: 57.4px;
-  width: 71px;
+  width: 100px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

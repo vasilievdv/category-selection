@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, memo } from 'react';
 import { Direction, Filter } from '../App';
 import { useAppDispatch } from '../../hooks';
 import { setDirectionsTo } from './actions';
@@ -7,21 +7,22 @@ import styles from './input-select.module.scss';
 type Props = {
   directions: Direction[];
   filter?: Filter[];
+  directionPrefix: string;
 };
 
 function InputSelect(props: Props) {
-  const { directions, filter } = props;
+  const { directions, filter, directionPrefix } = props;
 
   const dispatch = useAppDispatch();
 
-
   function onChangeCategory(e: ChangeEvent<HTMLSelectElement>) {
-    if (e.target.value.length) {
+    if (e.target.value.length && directionPrefix === 'from') {
       const filteredDirection = filter!.find(
         (d) => d.from.code === e.target.value
       );
       dispatch(setDirectionsTo(filteredDirection!.to));
-      console.log(e.target.value, filteredDirection!.to);
+    } else {
+      console.log(e.target.value);
     }
   }
   return (
@@ -43,4 +44,4 @@ function InputSelect(props: Props) {
   );
 }
 
-export default InputSelect;
+export default memo(InputSelect);

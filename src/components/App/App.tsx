@@ -23,9 +23,13 @@ function App() {
   return (
     <Card>
       <Categories directions={data} directionPrefix={'from'} />
-      <InputSelect directions={fromSelect} filter={filter} />
+      <InputSelect
+        directions={fromSelect}
+        filter={filter}
+        directionPrefix={'from'}
+      />
       <Categories directions={toSelect} directionPrefix={'to'} />
-      <InputSelect directions={selectedDirectionsTo} />
+      <InputSelect directions={selectedDirectionsTo} directionPrefix={'to'} />
     </Card>
   );
 }
