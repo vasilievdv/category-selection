@@ -1,0 +1,11 @@
+.imgRow {
+  width: 469px;
+  height: 32px;
+  padding: 32px 0 0 0;
+  text-align: right;
+}
+
+.exchageImg {
+  display: inline-block;
+  margin-right: 28px;
+}/*# sourceMappingURL=exchange.module.css.map */

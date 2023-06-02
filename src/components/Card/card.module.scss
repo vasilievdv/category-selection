@@ -1,6 +1,10 @@
 @import '../styles/variables.scss';
 
 .card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 524px;
   height: 313px;
   position: absolute;

@@ -1,3 +1,9 @@
+.categories {
+  width: 469px;
+  margin-bottom: 0.5rem;
+  margin-left: -15px;
+}
+
 .category {
   background: none;
   border: none;

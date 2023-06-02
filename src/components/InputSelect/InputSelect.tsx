@@ -32,7 +32,9 @@ function InputSelect(props: Props) {
         className={styles.select}
         onChange={(e: ChangeEvent<HTMLSelectElement>) => onChangeCategory(e)}
       >
-        <option value="">Choose direction</option>
+        <option value="">
+          Choose direction
+        </option>
         {!!directions.length &&
           directions.map((d, id) => (
             <option value={d.code} key={id}>

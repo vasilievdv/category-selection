@@ -8,3 +8,5 @@ declare module '*.module.scss' {
   export default content;
 }
 
+declare module '*.png';
+

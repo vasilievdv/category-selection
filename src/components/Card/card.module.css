@@ -1,4 +1,8 @@
 .card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 524px;
   height: 313px;
   position: absolute;
@@ -7,7 +11,7 @@
   right: 0px;
   bottom: 0px;
   margin: auto;
-  border-color: hsl(0, 0%, 41%);
+  border-color: rgb(200, 206, 212);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

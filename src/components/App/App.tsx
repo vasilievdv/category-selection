@@ -5,6 +5,7 @@ import { mockDirections, mockFilter } from './mockData';
 import Card from '../Card';
 import Categories from '../Categories';
 import InputSelect from '../InputSelect';
+import Exchange from '../Exchange';
 
 function App() {
   const { data } = useAppSelector((state) => state.mainPage.directions);
@@ -28,6 +29,7 @@ function App() {
         filter={filter}
         directionPrefix={'from'}
       />
+      <Exchange />
       <Categories directions={toSelect} directionPrefix={'to'} />
       <InputSelect directions={selectedDirectionsTo} directionPrefix={'to'} />
     </Card>
