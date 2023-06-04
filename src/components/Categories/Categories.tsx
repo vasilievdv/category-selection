@@ -4,7 +4,6 @@ import { Direction } from '../App';
 import { filterData } from './filterData';
 import { FilterData } from './types';
 import { setDirectionsFrom, setSelectedDirectionsTo } from './actions';
-// import { setDirectionsTo } from '../InputSelect';
 import styles from './categories.module.scss';
 
 type Props = {
